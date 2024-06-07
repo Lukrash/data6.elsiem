@@ -1,0 +1,50 @@
+[
+    {
+        "appName" : "Visitor Services",
+        "appVersion" : "1.1.0.3",
+        "appCompany" : "Data6.com",
+        "appDescription" : "API to register visits in a webpage",
+        "appInfoPage" : "html",
+        "app404Page" : "html",
+        "appTimeZone" : "Europe/Madrid",
+        "appRootFolder" : "visitor-services",
+        "modDatabase" : {
+            "Driver" : "mysql",
+            "Host" : "localhost",
+            "Name" : "visitorDb",
+            "Port" : "3306",
+            "User" : "lukrash",
+            "Password" : "Suecia31"
+        },
+        "modSecurity" : {
+            "Type" : {
+                "Mode" : "jwt",
+                "Key" : "K3y2G3tV4l1dT0k3n",
+                "MinutesExpired" : "10",
+                "Subject" : "Visitor Services"
+            },
+            "Controllers" : {
+                "visitController" : [
+                    "GET",
+                    "POST"
+                ]
+            }
+        },
+        "modCommunication" : {
+            "Apis" :{
+                "GetLocateByIP":{
+                    "Description" : "Api que devuelve la localizacion por IP",
+                    "Url" : "http://ip-api.com",
+                    "Method" : "GET",
+                    "UrlApi" : "http://ip-api.com/json/#ip#"
+                },
+                "GetUserAgent":{
+                    "Description" : "Api que devuelve el User Agent formateado en campos",
+                    "Url" : "http://www.useragentstring.com",
+                    "Method" : "GET",
+                    "UrlApi" : "http://www.useragentstring.com/?uas=#uas#&getJSON=all"
+                }
+            }
+        }
+    }
+]

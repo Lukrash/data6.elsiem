@@ -1,0 +1,33 @@
+[
+    {
+        "appName" : "Example Elseim 1",
+        "appVersion" : "1.1.0.2",
+        "appCompany" : "Data6.com",
+        "appDescription" : "Simple API rest with no security and databse connection. It only have a simple controller with methods to show how this framework works.<br> <b>Enjoy it!</b>",
+        "appInfoPage" : "html",
+        "app404Page" : "html",
+        "appTimeZone" : "Europe/Madrid",
+        "modDatabase" : {
+            "Driver" : "mysql",
+            "Host" : "localhost",
+            "Name" : "elsiem_test",
+            "Port" : "3306",
+            "User" : "lukrash",
+            "Password" : "Suecia31"
+        },
+        "modSecurity" : {
+            "Type" : {
+                "Mode" : "jwt",
+                "Key" : "K3y2G3tV4l1dT0k3n",
+                "MinutesExpired" : "10",
+                "Subject" : "Example Elseim 1"
+            },
+            "Controllers" : {
+                "functionsController" : [
+                    "GET",
+                    "GET_GenerateUniqueId"
+                ]
+            }
+        }
+    }
+]
